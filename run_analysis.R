@@ -36,8 +36,8 @@ names[df] <- c("Subject", "Activity", subfeatures)
 
 
 STEP 5: 
-little <- df %>% group_by(Subject,Activity) %>% summarise_all(mean)
-little <- as.data.frame(little)
+tidy <- df %>% group_by(Subject,Activity) %>% summarise_all(mean)
+tidy <- as.data.frame(tidy)
 
 
 
