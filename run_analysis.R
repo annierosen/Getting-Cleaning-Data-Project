@@ -17,6 +17,7 @@ df <- df[,indices]
 #combines data related to activities performed and subjects doing it
 activity_data <- rbind(ytrain,ytest)
 subject_data <- rbind(subtrain, subtest) 
+df <- cbind(subject_data, activity_data, df)
 names(df)[1:2] <- c("Subject", "Activity")
 
 STEP 3: 
@@ -27,7 +28,7 @@ activity_column <- gsub("3", "Walking Downstairs", activity_column)
 activity_column <- gsub("4", "Sitting", activity_column)
 activity_column <- gsub("5", "Standing", activity_column)
 activity_column <- gsub("6", "Laying", activity_column)
-
+df[2] <- activity_column 
 
 STEP 4: 
 subfeatures <- features[indices,]
@@ -37,6 +38,7 @@ subfeatures <- gsub("-","", subfeatures)
 subfeatures <- gsub("()","", subfeatures, fixed = TRUE) 
 subfeatures <- gsub("std","Std", subfeatures)
 subfeatures <- gsub("m","M", subfeatures)
+names[df] <- c("Subject", "Activity", subfeatures)
 
 
 STEP 5: 
