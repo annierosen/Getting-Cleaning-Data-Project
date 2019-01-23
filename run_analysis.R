@@ -1,7 +1,3 @@
-
-##read in all files provided, call them:
-activity, features, train, test, ytest, ytrain, etc. 
-
 STEP 1: 
 df <- rbind(train, test)
 
