@@ -1,18 +1,29 @@
-Explanation of the script:
+ 
+DATA VARIABLES 
 
-Preliminary steps: name all datasets. The names for the datasets used were: train, test, ytrain, ytest, subtrain, subtest, activity, features. 
+"features": from 'features.txt' (List of all features), where data only related to means & standard deviations is extracted. 
+"train" : 'train/X_train.txt'(Training set). 
+"ytrain" : 'train/y_train.txt'(Training labels). 
+"test : 'test/X_test.txt'(Test set). 
+"ytest" : 'test/y_test.txt' (Test labels). 
+"subtrain" : subject_train.txt (Indicates which subject in training set performed particular activity).   
+"subtest" : subject_test.txt (Indicates which subject in training set performed particular activity). 
 
-STEP 1: 
-uses rowbind to merge the train & test datasets. I call the merged dataframe "df". 
 
-STEP 2: 
-finds all rows in the features dataset which has information on mean and standard deviation. I call this list "indices", and I use this list to filter "df" for only these features. Then I column bind the activity and subject data into "df". 
+ACTIVITY VARIABLES:
 
-STEP 3: 
-in order to label the activity data, I use "gsub" to replace each activity id number with the name of the activity. I call this column "activity_column", and then save the second column in "df" as "activity_column". 
+1 WALKING
+2 WALKING_UPSTAIRS
+3 WALKING_DOWNSTAIRS
+4 SITTING
+5 STANDING
+6 LAYING 
 
-STEP 4: 
-to clean up the names in "features", I create a vector called "subfeatures" and the function gsub. Then I rename the names in "df" with "subject", "activity", and "subfeatures". 
 
-STEP 5: 
-finally, I group by the features "subject" and "activity" in "df", find the means of all "features" and call the new tidy dataframe "little". 
+EXPLANATION OF DATA (from the README.TXT) 
+"The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data." 
+
+
+
+
+
