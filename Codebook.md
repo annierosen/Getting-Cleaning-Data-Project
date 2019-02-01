@@ -11,7 +11,7 @@ DATA VARIABLES
 
 
 ACTIVITY VARIABLES:
-
+(describes the six different types of activities that the subjects performed), 
 1 WALKING
 2 WALKING_UPSTAIRS
 3 WALKING_DOWNSTAIRS
