@@ -1,7 +1,7 @@
  
 DATA VARIABLES 
 
-"features": from 'features.txt' (List of all features), where data only related to means & standard deviations is extracted. 
+"features": from 'features.txt' (List of all features), where data only related to means & standard deviations was extracted. 
 "train" : 'train/X_train.txt'(Training set). 
 "ytrain" : 'train/y_train.txt'(Training labels). 
 "test : 'test/X_test.txt'(Test set). 
@@ -11,13 +11,13 @@ DATA VARIABLES
 
 
 ACTIVITY VARIABLES:
-(describes the six different types of activities that the subjects performed), 
-1 WALKING
-2 WALKING_UPSTAIRS
-3 WALKING_DOWNSTAIRS
-4 SITTING
-5 STANDING
-6 LAYING 
+(describes the six different types of activities that the subjects performed, with the associated ID for each activity), 
+1: WALKING
+2: WALKING_UPSTAIRS
+3: WALKING_DOWNSTAIRS
+4: SITTING
+5: STANDING
+6: LAYING 
 
 
 EXPLANATION OF DATA (from the README.TXT) 
